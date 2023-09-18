@@ -27,8 +27,8 @@ type httpPublic struct {
 	Handler  *httpPublicHandler
 }
 
-func newHTTPPublic(lc fx.Lifecycle, args *HTTPPublicArgs) {
-	logger := zap.L().With(
+func newHTTPPublic(lc fx.Lifecycle, args *HTTPPublicArgs, zlog *zap.Logger) {
+	logger := zlog.With(
 		zap.String("serverType", "public"),
 		zap.String("port", fmt.Sprintf(":%d", args.Port)),
 	)

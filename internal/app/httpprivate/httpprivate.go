@@ -27,8 +27,8 @@ type httpPrivate struct {
 	Handler  *httpPrivateHandler
 }
 
-func newHTTPPrivate(lc fx.Lifecycle, args *HTTPPrivateArgs) {
-	logger := zap.L().With(
+func newHTTPPrivate(lc fx.Lifecycle, args *HTTPPrivateArgs, zlog *zap.Logger) {
+	logger := zlog.With(
 		zap.String("serverType", "private"),
 		zap.String("port", fmt.Sprintf(":%d", args.Port)),
 	)

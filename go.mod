@@ -5,6 +5,8 @@ go 1.19
 require go.uber.org/fx v1.20.0
 
 require (
+	github.com/arl/statsviz v0.5.2 // indirect
+	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/labstack/echo/v4 v4.11.1 // indirect
 	github.com/labstack/gommon v0.4.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
